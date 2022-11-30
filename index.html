@@ -9,23 +9,101 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="header">
-            <span class="material-symbols-outlined">
-                menu
-            </span>
-            <a href="#" class="logo">
-                <i class="fa-brands fa-youtube"></i>
-                <h1>Youtube <sup>NG</sup></h1>
-            </a>
-        </div>
-        <nav>
-            <ul class="sidebar-list">
-                <div class="responsive-sidebar">
-                    <li class="active2">
+    <div class="wrapper">
+        <header>
+            <div class="header">
+                <div class="logo">
+                    <a href="#">
+                        <span class="material-symbols-outlined menu-icon">
+                            menu
+                        </span>
+                    </a>
+                    <a href="#">
+                        <div class="logo-name">
+                            <i class="fa-brands fa-youtube"></i>
+                            <h1>YouTube <sup>NG</sup></h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="searchbar">
+                    <div class="search">
+                        <input type="search" name="" id="search" placeholder="Search">
+                        <a href="#">
+                            <span class="material-symbols-outlined search-icon">
+                                search
+                            </span>
+                        </a>
+                    </div>
+                    <span class="material-symbols-outlined">
+                        mic
+                    </span>
+                </div>
+                <div class="icons">
+                    <a href="#">
+                        <span class="material-symbols-outlined">
+                            video_call
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-outlined">
+                            notifications
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span class="profile-photo">
+                            E
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="content-subjects">
+                    <a href="#">
+                        <div class="box all">All</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">HTML</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">Nollywood</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">Music</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">Mixes</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">Colleges</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">Live</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">Taylor Swift</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">C++</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">Mercy Chinwo</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">Contemporary Worship Music</div>
+                    </a>
+                    <a href="#">
+                        <div class="box">News</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="app-bar">
+            <nav>
+                <ul class="sidebar">
+                    <li class="active">
                         <a href="#">
                             <span class="material-symbols-outlined">
                                 home
@@ -42,43 +120,146 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="subscriptions">
                             <span class="material-symbols-outlined">
                                 subscriptions
                             </span>
                             Subscriptions
                         </a>
                     </li>
+                    <li class="line-break">
+                        <hr>
+                    </li>
+                    <li class="library">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                video_library
+                            </span>
+                            Library
+                        </a>
+                    </li>
+                    <li class="history">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                history
+                            </span>
+                            History
+                        </a>
+                    </li>
+                    <li class="your-videos">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                smart_display
+                            </span>
+                            Your Videos
+                        </a>
+                    </li>
+                    <li class="watch-later">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                schedule
+                            </span>
+                            Watch Later
+                        </a>
+                    </li>
+                    <li class="download">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                download
+                            </span>
+                            Download
+                        </a>
+                    </li>
+                    <li class="liked-videos">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                thumb_up
+                            </span>
+                            Liked Videos
+                        </a>
+                    </li>
+                    <li class="show-more">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                            Show More
+                        </a>
+                    </li>
+                    <li class="line-break">
+                        <hr>
+                    </li>
+                    <li class="sub-heading">Subscriptions</li>
+                    <li class="sub-profile">
+                        <a href="#">
+                            <img src="img/channels4_profile.jpg" alt="pastor-jerry-eze">
+                            Pastor Jerry Eze
+                        </a>
+                    </li>
+                    <li class="sub-profile">
+                        <a href="#">
+                            <img src="img/channels4_profile(2).jpg" alt="telusko">
+                            Telusko
+                        </a>
+                    </li>
+                    <li class="sub-profile">
+                        <a href="#">
+                            <img src="img/logos.jpg" alt="logos-ministries">
+                            Logos Ministries
+                        </a>
+                    </li>
+                    <li class="sub-profile">
+                        <a href="#">
+                            <img src="img/Janelle.jpg" alt="janelle olisea">
+                            Janelle Olisea
+                        </a>
+                    </li>
+                    <li class="sub-profile">
+                        <a href="#">
+                            <img src="img/korty.jpg" alt="korty eo">
+                            korty eo
+                        </a>
+                    </li>
+                    <li class="sub-profile">
+                        <a href="#">
+                            <img src="img/mosh.jpg" alt="mosh">
+                            Programming with ...
+                        </a>
+                    </li>
+                    <li class="sub-profile">
+                        <a href="#">
+                            <img src="img/clevver-news.jpg" alt="clevver-news">
+                            Clevver News
+                        </a>
+                    </li>
+                    <li class="show-more">
+                        <a href="#">
+                            <span class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                            Show 26 more
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-content">
+                <div>
+                        
                 </div>
-                <li class="active">
-                    <a href="#">
-                        <span class="material-symbols-outlined">
-                            home
-                        </span>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="material-symbols-outlined">
-                            play_arrow
-                        </span>
-                        Shorts
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="material-symbols-outlined">
-                            subscriptions
-                        </span>
-                        Subscriptions
-                    </a>
-                </li>
-                <li class="line-break">
-                    <hr>
-                </li>
-            </ul>
-        </nav>
+                <div>
+                    ajkdd
+                    ajkdd
+                </div>
+                <div>
+                    ajkdd
+                    ajkdd
+                </div>
+                <div>
+                    ajkdd
+                    ajkdd
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

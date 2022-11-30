@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(19, 19, 19);
+}
+
+nav{
+    /* background-color: blue; */
+    padding-block: .5rem;
+    width: clamp(16%, 12vw, 30%);
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-height: 100vh;
+}
+
+.sidebar{
+    /* background-color: red; */
+    /* margin-inline: auto; */
+    font-size: clamp(15px, 2vw, 2.5rem);
+    /* white-space: nowrap; */
+    /* padding: .5rem; */
+}
+
+.sidebar .material-symbols-outlined{
+    display: block;
+    /* margin-inline: auto; */
+    text-align: center;
+    font-size: clamp(1.2rem, 2vw, 2.6rem);
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.sidebar ul .menu .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.sidebar ul li{
+    margin-bottom: 1rem;
+    /* padding-left: 5%; */
+}
+
+.sidebar ul li a{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: clamp(.5rem, 1vw, 2.6rem);
+    gap: 5px;
+}
+
+@media screen and (min-width: 767px){
+    .sidebar{
+        max-width: 10vh;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .sidebar{
+        max-width: 8vh;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .sidebar{
+        max-width: 12vh;
+    }
+
+    .main-nav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .second-nav{
+        display: none;
+    }
+}
+
+/* .heading{
+    display: flex;
+    justify-content: center;
+    padding-left: 4vw;
+    align-items: center;
+    gap: 1vw;
+    font-size: clamp(12px, 2.5vw, 2.5rem);
+    padding-inline: 1rem;
+} */
+
+
+
+/* .logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.logo h1{
+    letter-spacing: -1px;
+}
+
+.logo i{
+    color: red;
+    font-size: clamp(1.2rem, 2vw, 2.6rem);
+}
+.logo h1 sup{
+    font-size: clamp(10px, 2vw, 1rem);
+    font-weight: 400;
+    color: #212121;
+} */
