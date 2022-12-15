@@ -191,6 +191,7 @@ main .video-content>video{
 
 main .other-videos{
     width: 25vw;
+    /* background-color: red; */
 }
 
 
@@ -279,6 +280,7 @@ main .other-videos{
 .other-videos .video-sugg{
     display: flex;
     gap: 10px;
+    margin-bottom: 15px;
 }
 
 .other-videos .video-sugg #video-img>img{
@@ -309,8 +311,9 @@ main .other-videos{
     text-align: start;
 }
 
-.other-videos #link{
+.other-videos {
     margin-bottom: 100px;
+    /* background-color: blue; */
 }
 @media screen and (max-width: 1104px) {
     .searchbar>.material-symbols-outlined{
@@ -353,7 +356,7 @@ main .other-videos{
     }
 }
 
-@media screen and (max-width: 660px){
+@media screen and (max-width: 830px){
     header{
         height: 50px;
         padding-top: .6rem;

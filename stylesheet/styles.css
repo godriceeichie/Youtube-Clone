@@ -49,13 +49,17 @@
     padding: 0;
 }
 
+html{
+    margin: 0;
+}
 
 body{
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     font-family: 'Roboto', 'Arial', sans-serif;
+    /* overflow-x: hidden; */
 }
 
 .wrapper{
@@ -74,11 +78,17 @@ ul{
 header{
     position: fixed;
     top: 0;
-    width: 100vw;
-    height: 150px;
-    z-index: 10;
+    left: 0;
+    width: 100%;
+    /* height: 150px; */
+    z-index: 100;
     background-color: white;
-    padding-top: .8rem;
+    /* padding-top: .8rem; */
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .header, .logo, .logo-name{
@@ -91,6 +101,10 @@ header{
     /* background-color: brown; */
     justify-content: space-between;
     padding-inline: 18px;
+    position: sticky;
+    right: 0;
+    left: 0;
+    width: 100%;
 }
 
 .header .material-symbols-outlined{
@@ -109,6 +123,15 @@ header{
 
 .logo{
     gap: 10px;
+    padding-inline: 12px;
+}
+
+.menu-toggle:hover{
+    border-radius: 50%;
+    display: inline-block;
+    padding: 4px 4px;
+    border-radius:50%;
+    background-color: rgb(229,229,229);
 }
 
 .logo .menu-icon{
@@ -139,11 +162,12 @@ header{
 }
 
 .searchbar{
-    width: 50vw;
+    width: 50%;
     display: flex;
     align-items: center;
     gap: 7px;
     /* background-color: red; */
+    padding-inline: 8px;
 }
 
 .search{
@@ -201,13 +225,17 @@ header{
 
 .content-subjects{
     padding-top: 7px;
-    margin-top: 18px;
+    /* margin-top: 18px; */
     margin-left: 18rem;
     display: flex;
     gap: 12px;
     overflow: auto;
     /* background-color: red; */
     height: 48px;
+}
+
+.content-subjects-collapsed{
+    margin-left: 8rem;
 }
 
 .content-subjects::-webkit-scrollbar{
@@ -253,8 +281,8 @@ header{
     /* background-color: red; */
     display: flex;
     max-width: 100vw;
-    min-height: 100vh;
-    gap: 30px;
+    height: inherit;
+    /* gap: 30px; */
     padding-top: 70px;
 }
 /* 
@@ -262,15 +290,52 @@ Gave it a position of fixed so it wont be scrolled with the rest of the page and
 padding to push it down and gave it a high z-index so it will be showing when it is scrolling down */
 nav{
     padding-top: 10px;
-    max-width: 20vw;
+    width: 20%;
     position: fixed;
     top: 70px;
     left: 0;
     bottom: 0;
     overflow: auto;
-    z-index: 1000;
-    background-color: white;
+    z-index: 100;
+    transition: width 0.2s;
+    /* background-color: white; */
 }
+
+.nav-collapsed{
+    width: 7%;
+    position: fixed;
+    top: 42px;
+    left: 0;
+    bottom: 0;
+    padding-top: 47px;
+}
+
+.nav-collapsed .large-menu-list{
+    display: none;
+}
+
+.nav-collapsed .sidebar{
+    padding-inline: 1px;
+}
+
+.nav-collapsed .sidebar li{
+    margin-bottom: 20px;
+    padding-left: 0px;
+}
+
+.nav-collapsed .sidebar li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .7rem;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.nav-collapsed .sidebar li .subscriptions{
+    font-size: .7rem;
+}
+
 
 nav::-webkit-scrollbar-thumb{
     /* background-color: #222222a2; */
@@ -284,7 +349,8 @@ nav::-webkit-scrollbar-thumb:hover{
 
 nav .sidebar{
     padding-inline: .7rem;
-    /* padding-left: 5px; */
+    /* background-color: green; */
+    padding-left: 5px;
 }
 
 .sidebar .material-symbols-outlined{
@@ -304,8 +370,9 @@ nav .sidebar{
 }
 
 nav .sidebar li{
-    /* padding-left: 8px; */
+    padding-left: 8px;
     /* background-color: red; */
+    width: 100%;
     cursor: pointer;
 }
 
@@ -314,7 +381,7 @@ nav .sidebar .sub-heading{
     margin-block: 15px;
 }
 
-nav .sidebar .active a{
+.active{
     background-color: rgb(242,242,242);
     border-radius: 8px;
 }
@@ -334,6 +401,10 @@ nav .sidebar li a:hover{
     border-radius: 8px;
 }
 
+.small-side-bar{
+    display: none;
+}
+
 .line-break{
     margin-block: 7px;
 }
@@ -351,7 +422,7 @@ nav .sidebar li a:hover{
 
 .main-content{
     /* background-color: blue; */
-    margin-left: 350px;
+    margin-left: 280px;
     margin-right: 15px;
     /* margin-inline: auto; */
     padding-top: 70px;
@@ -361,6 +432,12 @@ nav .sidebar li a:hover{
     gap: 20px 30px;
     width: 100%;
     height: inherit;
+    padding-top: 50px;
+    padding-left: 10px;
+}
+
+.main-content-collapsed{
+    margin-left: 120px;
 }
 
 .main-content .link{
@@ -427,12 +504,18 @@ nav .sidebar li a:hover{
     font-size: 14px;
     white-space: wrap;
     line-height: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .app-bar>hr{
     border: none;
     border-top: 2px solid blue;
 }
+
+
 @media screen and (max-width: 2560px) {
     nav{
         width: 10%;
@@ -451,14 +534,8 @@ nav .sidebar li a:hover{
 
     .main-content{
         grid-template-rows: repeat(auto-fill, minmax(230px, 1fr));
-        margin-left: 300px;
+        /* margin-left: 300px; */
     }
-}
-
-@media screen and (min-width: 1100px) {
-    /* .main-content hr{
-        grid-column: span 4;
-    } */
 }
 
 /* Main tab screen */
@@ -505,27 +582,45 @@ nav .sidebar li a:hover{
     .content-subjects{
         margin-left: 7rem;
     }
-    nav{
+    .small-side-bar{
         width: 10%;
         position: fixed;
         top: 42px;
         left: 0;
         bottom: 0;
-        /* z-index: 1000; */
         padding-top: 47px;
+        display: block;
         /* position: fixed;
         top: 10px; */
     }
 
-    .sidebar{
+    .big-side-bar{
+        display: none;
+    }
+
+    /* .small-side-bar{
+        width: 10%;
+        position: fixed;
+        top: 42px;
+        left: -300px;
+        bottom: 0;
+        padding-top: 47px;
+        transition: 0.3s linear;
+    } */
+    
+    .small-side-bar .clicked{
+        left: 0;
+    }
+    
+    .small-side-bar .sidebar{
         padding-inline: 1px;
     }
-
-    nav .sidebar li{
+    
+    .small-side-bar .sidebar li{
         margin-bottom: 20px;
     }
-
-    nav .sidebar li a {
+    
+    .small-side-bar .sidebar li a {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -533,8 +628,8 @@ nav .sidebar li a:hover{
         text-align: center;
         padding: 0 5px;
     }
-
-    nav .sidebar li .subscriptions{
+    
+    .small-side-bar .sidebar li .subscriptions{
         font-size: .7rem;
     }
 
@@ -547,7 +642,7 @@ nav .sidebar li a:hover{
     }
 
     .main-content{
-        margin-left: 150px;
+        margin-left: 120px;
         padding-top: 80px;
         gap: 0px 30px;
     }
@@ -579,7 +674,12 @@ nav .sidebar li a:hover{
     }
     header{
         height: 100px;
-        padding-top: .6rem;
+        padding-block: 1rem;
+        gap: 0;
+    }
+
+    .header, .header .logo{
+        padding-inline: 0;
     }
     .searchbar{
         display: none;
@@ -604,10 +704,11 @@ nav .sidebar li a:hover{
         margin-top: 10px;
     }
 
-    nav{
+    nav, .small-side-bar, .big-side-bar{
         display: none;
     }
 
+    
     .sidebar .line-break{
         display: none;
     }
@@ -617,6 +718,7 @@ nav .sidebar li a:hover{
         padding-top: 50px;
         grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
         grid-template-rows: repeat(auto-fill, minmax(295px, 1fr));
+        row-gap: 20px;
     }
 
     .main-content .video-item .video-info{
